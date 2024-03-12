@@ -1,7 +1,6 @@
-// server/routes/courseRoutes.js
 const express = require("express");
 const router = express.Router();
-const Course = require("../../models/course");
+const Course = require("../models/course");
 
 router.post("/", async (req, res) => {
   try {

@@ -1,4 +1,3 @@
-// server/server.js
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
@@ -8,7 +7,7 @@ require('dotenv').config();
 
 app.use(express.json());
 app.use(cors());
-// Routes
+
 const studentRoutes = require("./routes/studentroutes");
 const courseRoutes = require("./routes/courseroutes");
 const resultRoutes = require("./routes/resultroutes")
@@ -16,7 +15,7 @@ const resultRoutes = require("./routes/resultroutes")
 app.use("/api/students", studentRoutes);
 app.use("/api/courses", courseRoutes)
 app.use("/api/results",resultRoutes)
-// MongoDB connection
+
 mongoose
   .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
